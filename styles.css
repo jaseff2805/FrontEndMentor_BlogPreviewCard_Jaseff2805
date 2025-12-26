@@ -1,0 +1,140 @@
+/* ========================= */
+/*  Fuentes locales Figtree  */
+/* ========================= */
+
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===================== */
+/*   Variables generales */
+/* ===================== */
+
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+  --shadow-card: 12px 12px 0 0 var(--clr-gray-950);
+  --shadow-card-hover: 18px 18px 0 0 var(--clr-gray-950);
+}
+
+
+/* Fondo completamente amarillo + tipografía del style-guide */
+body {
+  font-family: "Figtree", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.bg-body-custom {
+  background-color: var(--clr-yellow);
+}
+
+.bg-yellow-wrapper {
+  min-height: 100vh;
+}
+
+/* ===================== */
+/*    Card principal     */
+/* ===================== */
+
+.card.card-blog {
+  max-width: 384px;
+  width: 100%;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  border: 1px solid var(--clr-gray-950) !important;
+  box-shadow: 12px 12px 0 0 var(--clr-gray-950) !important;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition:
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+/* Imagen totalmente dentro de la tarjeta, sin sobresalir */
+.card-blog .card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Contenido interno de la card */
+.card-blog .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  align-items: flex-start;
+}
+
+/* Chip "Learning" */
+.badge-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--clr-yellow);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--clr-gray-950);
+  line-height: 1;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: auto;
+}
+
+/* Párrafo descriptivo */
+.card-text {
+  color: var(--clr-gray-500) !important;
+}
+
+/* Avatar */
+.avatar-img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Nombre del autor en 800 */
+.avatar-name {
+  font-weight: 800;
+}
+
+/* Título en 800 con hover amarillo */
+.card-title-link {
+  font-weight: 800;
+  transition: color 150ms ease;
+}
+
+.card-title-link:hover,
+.card-title-link:focus-visible {
+  color: var(--clr-yellow);
+}
+
+/* ================= */
+/*     Responsivo    */
+/* ================= */
+
+@media (max-width: 576px) {
+  .card-blog {
+    margin-inline: 1rem;
+  }
+}
